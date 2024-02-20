@@ -25,9 +25,6 @@ document.querySelector('button').addEventListener('click',
         document.getElementById('cp').innerHTML = Math.floor(Math.random() * 99998) + 1;
 
 
-
-
-
         if (ageElement.value < 18) {
 
             ticketPrice = ticketPrice - ticketPrice * minorsDiscount

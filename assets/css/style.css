@@ -9,12 +9,20 @@ body {
     background-color: rgba(117, 0, 0, 0.708);
 }
 
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+
+}
+
 .input {
     width: 60%;
     margin: auto;
     background-color: white;
     padding: 3rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
 
     > .first-row {
         display: flex;
@@ -37,14 +45,14 @@ body {
     width: 60%;
     margin: auto;
     background-color: white;
-    padding: 2rem 3rem;
-    margin-top: 5rem;
+    padding: 2rem 2rem;
+    margin-top: 1rem;
     display: flex;
 
     > .passenger {
         background-color: lightgrey;
         padding: 1rem;
-        
+        font-weight: bold;        
     }
 
     > .details {
