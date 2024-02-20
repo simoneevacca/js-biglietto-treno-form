@@ -11,38 +11,40 @@ console.log("LOG TEST " + passengerName.value);
 
 
 
-
-
-
-
-
-
-
-
-
 document.querySelector('button').addEventListener('click',
-function(){
-    let ticketPrice = distanceElement.value * 0.21;
-    
-    console.log(distanceElement.value * 0.21);
-    console.log(ageElement.value)
-    console.log(passengerName.value);
+    function () {
+        let ticketPrice = distanceElement.value * 0.21;
 
-    
-    document.getElementById('ticketname').innerHTML = passengerName.value
+        console.log(distanceElement.value * 0.21);
+        console.log(ageElement.value)
+        console.log(passengerName.value);
 
 
+        document.getElementById('ticketname').innerHTML = passengerName.value
+        document.getElementById('nc').innerHTML = Math.floor(Math.random() * 10) + 1;
+        document.getElementById('cp').innerHTML = Math.floor(Math.random() * 99998) + 1;
 
 
-    if (ageElement.value < 18) {
+
+
+
+        if (ageElement.value < 18) {
+
+            ticketPrice = ticketPrice - ticketPrice * minorsDiscount
+            document.getElementById('offer').innerHTML = 'Sconto minorenni'
+            
+
+        } else if (ageElement.value > 64) {
+
+            ticketPrice = ticketPrice - ticketPrice * over65Discount
+            document.getElementById('offer').innerHTML = 'Sconto pensionati'
         
-        ticketPrice = ticketPrice - ticketPrice * minorsDiscount
-        
-    } else if (ageElement.value > 64) {
-        
-        ticketPrice = ticketPrice - ticketPrice * over65Discount
-        
-    }
-    
-    console.log("ticket price is: " + ticketPrice);
-})
+        } else {
+            document.getElementById('offer').innerHTML = 'Biglietto Standard'
+
+        }
+
+        console.log("ticket price is: " + ticketPrice);
+        document.getElementById('cost').innerHTML = ticketPrice.toFixed(2) + '€';
+
+    })
