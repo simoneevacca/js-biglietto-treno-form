@@ -11,7 +11,7 @@ console.log("LOG TEST " + passengerName.value);
 
 
 
-document.querySelector('button').addEventListener('click',
+document.getElementById('calc').addEventListener('click',
     function () {
         let ticketPrice = distanceElement.value * 0.21;
 
@@ -43,5 +43,21 @@ document.querySelector('button').addEventListener('click',
 
         console.log("ticket price is: " + ticketPrice);
         document.getElementById('cost').innerHTML = ticketPrice.toFixed(2) + '€';
+
+    })
+
+    
+
+    document.getElementById('del').addEventListener('click',
+    function () {
+
+        distanceElement.value = '';
+        ageElement.value = '';
+        passengerName.value = '';
+        document.getElementById('ticketname').innerHTML = '-';
+        document.getElementById('nc').innerHTML = '-';
+        document.getElementById('cp').innerHTML = '-';
+        document.getElementById('cost').innerHTML = '-';
+        document.getElementById('offer').innerHTML = '-';
 
     })
