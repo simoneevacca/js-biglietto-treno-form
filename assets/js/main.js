@@ -54,10 +54,10 @@ document.getElementById('calc').addEventListener('click',
         distanceElement.value = '';
         ageElement.value = '';
         passengerName.value = '';
-        document.getElementById('ticketname').innerHTML = '-';
-        document.getElementById('nc').innerHTML = '-';
-        document.getElementById('cp').innerHTML = '-';
-        document.getElementById('cost').innerHTML = '-';
-        document.getElementById('offer').innerHTML = '-';
+        document.getElementById('ticketname').innerHTML = '';
+        document.getElementById('nc').innerHTML = '';
+        document.getElementById('cp').innerHTML = '';
+        document.getElementById('cost').innerHTML = '';
+        document.getElementById('offer').innerHTML = '';
 
     })
