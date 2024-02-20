@@ -9,7 +9,7 @@ body {
     background-color: rgba(117, 0, 0, 0.708);
 }
 
-.container {
+.input {
     width: 60%;
     margin: auto;
     background-color: white;
@@ -32,3 +32,33 @@ body {
         margin-top: 3rem;
     }
 }
+
+.ticket {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 2rem 3rem;
+    margin-top: 5rem;
+    display: flex;
+
+    > .passenger {
+        background-color: lightgrey;
+        padding: 1rem;
+        
+    }
+
+    > .details {
+        padding: 1rem;
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        & .value {
+            margin-top: 5rem;
+        }
+    }
+}
+
+
